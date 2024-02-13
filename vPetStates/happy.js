@@ -1,5 +1,5 @@
 
-import { Button, StyleSheet, Text, View, Image, useState} from 'react-native';
+import { Button, StyleSheet, Text, View, Image} from 'react-native';
 
 const PetView = ({ pet, handleOnPress }) => {
     let moodColor = styles.logoHappy;
@@ -25,7 +25,7 @@ const PetView = ({ pet, handleOnPress }) => {
         <Text style={styles.paragraph}>
          {pet.text}
         </Text>
-        <Image style={moodColor} source={pet.image} />
+        <Image source={pet.image} />
         <Button disabled={pet.buttonDisabled} title="Play with!" onPress={handleOnPress}></Button>
       </View>
     );
